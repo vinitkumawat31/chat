@@ -4,6 +4,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .models import ChatMessage
 import json 
+def home(request):
+	return redirect("chat:index")
 
 def index(request):
     return render(request, 'chat/index.html',{})
